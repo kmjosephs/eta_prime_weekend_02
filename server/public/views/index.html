@@ -9,6 +9,38 @@
         <script type="text/javascript" src="/scripts/app.js"></script>
     </head>
     <body>
+        <h1>Eta Favorite Movies</h1>
+
+        <script id="templateScript" type="text/x-handlebars-template">
+
+            <h2>
+              {{firstName}}
+              {{lastName}}
+            </h2>
+
+            <p>
+              <h3>Favorite Movies</h3>
+            </p>
+
+            {{#each favoriteMovies}} <!-- favoriteMovies is an array and it's
+              going through each object within the array -->
+              <div>
+                <p>{{movieName}}({{releaseYear}})</p>
+
+              </div>
+            {{/each}}
+
+            <button class="previous">{{firstName}}</button>
+            <button class="next">Next</button>
+            
+        </script>
+
+        <div class="currentPerson">
+
+        </div>
+
+
+
     </body>
 
 </html>
