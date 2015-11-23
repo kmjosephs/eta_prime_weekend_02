@@ -4,40 +4,45 @@
         <meta charset="UTF-8">
         <title></title>
         <link rel="stylesheet" href="/styles/style.css">
-	<script type="text/javascript" src="/vendors/jquery.min.js"></script>
-	<script type="text/javascript" src="/vendors/handlebars.min.js"></script>
+      	<script type="text/javascript" src="/vendors/jquery.min.js"></script>
+      	<script type="text/javascript" src="/vendors/handlebars.min.js"></script>
         <script type="text/javascript" src="/scripts/app.js"></script>
     </head>
     <body>
-        <h1>Eta Favorite Movies</h1>
+      <main>
+
+        <h1>Eta Cohort's Favorite Movies</h1>
 
         <script id="templateScript" type="text/x-handlebars-template">
 
-            <h2>
+            <h2 class="introPerson">
               {{firstName}}
               {{lastName}}
             </h2>
 
-            <p>
-              <h3>Favorite Movies</h3>
-            </p>
+            <p><h3 class="favMovies">Favorite Movies</h3></p>
 
             {{#each favoriteMovies}} <!-- favoriteMovies is an array and it's
               going through each object within the array -->
-              <div>
-                <p>{{movieName}}({{releaseYear}})</p>
+              <section class="movieName">
+                <p>{{movieName}} ({{releaseYear}})</p>
 
-              </div>
+              </section>
             {{/each}}
 
-            <button class="previous">Previous</button>
-            <button class="next">Next</button>
+          </main>
+
+
 
         </script>
 
         <div class="currentPerson">
 
         </div>
+
+          <button class="previous">Previous</button>
+          <button class="next">Next</button>
+
 
 
 
